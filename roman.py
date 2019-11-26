@@ -14,12 +14,8 @@ def convert(string: str) -> int:
         try:
             if roman[char] < roman[string[i + 1]]:
                 output -= roman[char]
-            elif roman[char] > roman[string[i + 1]]:
-                output += roman[char]
-            else:
+            elif roman[char] >= roman[string[i + 1]]:
                 output += roman[char]
         except IndexError:
             output += roman[char]
-            return output
-
     return output
