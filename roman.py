@@ -12,10 +12,10 @@ def convert(string: str) -> int:
     output = 0
     for i, char in enumerate(string):
         try:
-            if roman[char] < roman[string[i + 1]]:
-                output -= roman[char]
-            elif roman[char] >= roman[string[i + 1]]:
+            if roman[char] >= roman[string[i + 1]]:
                 output += roman[char]
+            else:
+                output -= roman[char]
         except IndexError:
             output += roman[char]
     return output
