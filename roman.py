@@ -2,10 +2,11 @@
 Roman number to integer
 """
 
-def convert(str: str) -> int:
+
+def convert(strg: str) -> int:
     """Conversion"""
     rome_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100}
-    rome_list = [rome_dict[i] for i in str]
+    rome_list = [rome_dict[i] for i in strg]
     sum_nums = 0
 
     while rome_list:
